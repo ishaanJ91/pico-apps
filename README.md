@@ -1,12 +1,12 @@
 # pico-apps
 
-Template code repository for the Raspbery Pi Pico used for the CSU23021 course for the Spring semester 2022/2023. Students should clone this repository to their own Git area and use it as the basis to complete their assignment and lab coursework throughout the year.
+Template code repository for the Raspberry Pi Pico used for the CSU23021 course for the Spring semester 2022/2023, 2023/2024, 2024/2025, and so on. Students should clone this repository to their own Git area and use it as the basis to complete their assignments and labs throughout the year.
 
-This repository is setup for use with Visual Studio Code, CMAKE and Doxygen. All build collateral output will be generated under the "build" folder and all Doxygen generated documentation will be generated under the "docs" folder. The repository is structured as follows.
+This repository is set up for use with Visual Studio Code, CMAKE and Doxygen. All build collateral output will be generated under the "build" folder and all Doxygen-generated documentation will be generated under the "docs" folder. The repository is structured as follows.
 
 ## assignments
 
-Top-level folder containing skeleton project templates for the three course coding assignments.
+Top-level folder containing skeleton project templates for the three coding assignments.
 
 ### assignments/assign01
 
@@ -18,7 +18,7 @@ Skeleton template for assignment #02.
 
 ## examples
 
-Top level folder containing all example projects.
+Top-level folder containing all example projects.
 
 ### examples/blink_asm
 
@@ -46,7 +46,7 @@ A C-based application that uses PIO to alternately flash the NeoPixel on the MAK
 
 ## labs
 
-Top-level folder containing skeleton project templates for the ten course lab exercises.
+Top-level folder containing skeleton project templates for the ten lab exercises.
 
 ### labs/lab01
 
