@@ -1,0 +1,5 @@
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/elf2uf2/CMakeFiles/elf2uf2.dir
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/elf2uf2/CMakeFiles/edit_cache.dir
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/elf2uf2/CMakeFiles/rebuild_cache.dir
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir

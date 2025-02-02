@@ -1,38 +1,38 @@
 {
-    // These settings tweaks to the cmake plugin will ensure
-    // that you debug using cortex-debug instead of trying to launch
-    // a Pico binary on the host
-    "cmake.statusbar.advanced": {
-        "debug": {
-            "visibility": "hidden"
-        },
-        "launch": {
-            "visibility": "default"
-        },
-        "launchTarget": {
-            "visibility": "default"
-        },
-        "build": {
-            "visibility": "default"
-        },
-        "buildTarget": {
-            "visibility": "default"
-        }
+  // These settings tweaks to the cmake plugin will ensure
+  // that you debug using cortex-debug instead of trying to launch
+  // a Pico binary on the host
+  "cmake.statusbar.advanced": {
+    "debug": {
+      "visibility": "hidden"
     },
-    "cmake.configureEnvironment": {
-        "PICO_SDK_PATH": "D:\\Pico\\pico-sdk"
+    "launch": {
+      "visibility": "default"
     },
-    "cmake.generator": "NMake Makefiles",
-    "cmake.configureOnOpen": true,
-    "cmake.buildBeforeRun": true,
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-    "cortex-debug.openocdPath": "D:\\Pico\\tools\\openocd-picoprobe\\openocd.exe",
-    "cortex-debug.enableTelemetry": false,
-    "cortex-debug.registerUseNaturalFormat": false,
-    "doxygen_runner.doxygen_command": "c:\\Program Files\\doxygen\\bin\\doxygen.exe",
-    "doxygen_runner.configuration_file_override": "${workspaceRoot}\\Doxyfile",
-    "files.associations": {
-        "*.S": "arm",
-        "*.h": "c"
+    "launchTarget": {
+      "visibility": "default"
+    },
+    "build": {
+      "visibility": "default"
+    },
+    "buildTarget": {
+      "visibility": "default"
     }
+  },
+  "cmake.configureEnvironment": {
+    "PICO_SDK_PATH": "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/pico-sdk"
+  },
+  "cmake.generator": "Unix Makefiles",
+  "cmake.configureOnOpen": true,
+  "cmake.buildBeforeRun": true,
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "cortex-debug.openocdPath": "tools/opeocd",
+  "cortex-debug.enableTelemetry": false,
+  "cortex-debug.registerUseNaturalFormat": false,
+  "doxygen_runner.doxygen_command": "/opt/homebrew/bin/doxygen",
+  "doxygen_runner.configuration_file_override": "${workspaceRoot}\\Doxyfile",
+  "files.associations": {
+    "*.S": "arm",
+    "*.h": "c"
+  }
 }

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/CMakeFiles/PioasmBuild"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/CMakeFiles/PioasmBuild.rule"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/CMakeFiles/PioasmBuild-complete.rule"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule"
+		},
+		{
+			"file" : "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"PioasmBuild"
+		],
+		"name" : "PioasmBuild"
+	}
+}

@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/CMakeFiles/PioasmBuild
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/CMakeFiles/PioasmBuild.rule
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/CMakeFiles/PioasmBuild-complete.rule
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule
