@@ -1,18 +1,39 @@
 {
-    "version": 1,
-    "author": "CSU23021 Student",
-    "editor": "wokwi",
-    "parts": [
-      {
-        "type": "wokwi-pi-pico",
-        "id": "pico",
-        "top": 0,
-        "left": 0,
-        "attrs": { "env": "arduino-community" }
-      }
-    ],
-    "connections": [
-      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
-      [ "pico:GP1", "$serialMonitor:TX", "", [] ]
-    ]
-  }
+  "version": 1,
+  "author": "CSU23021 Student",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "arduino-community" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 81.6,
+      "left": 95.45,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 223.2,
+      "left": 29,
+      "rotate": 180,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    ["pico:GP0", "$serialMonitor:RX", "", []],
+    ["pico:GP1", "$serialMonitor:TX", "", []],
+    ["pico:3V3", "r1:1", "red", ["h0"]],
+    ["pico:GP21", "r1:2", "orange", ["h0"]],
+    ["pico:GP21", "btn1:2.l", "orange", ["h52.8", "v102.45"]],
+    ["pico:GND.6", "btn1:1.l", "black", ["h72", "v121.65"]]
+  ],
+  "dependencies": {}
+}

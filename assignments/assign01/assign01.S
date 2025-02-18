@@ -32,10 +32,84 @@
 
 @ Entry point to the ASM portion of the program
 main_asm:
-        ldr     r0, =msg
-        bl      printf
+    ldr     R4, =LED_VAL_ON 
+    ldr     R5, =DFLT_ALARM_TIME
+
 main_loop:
-        b       main_loop
+    bl      led_init
+    bl      btn_init
+    bl      alarm_init
+    bl      gpio_init
+    bl      alarm_setup
+    wfi
+
+    b       main_loop
+
+
+led_init:
+    push    {lr}
+    ldr     R0, =GPIO_LED_PIN
+    bl      asm_gpio_init
+    ldr     R0, =GPIO_LED_PIN
+    ldr     R1, =GPIO_DIR_OUT
+    bl      gpio_set_dir
+    pop     {pc}
+
+btn_init:
+    push    {lr}
+
+    // Initialize the "enter" button
+    ldr     R0, =GPIO_BTN_EN
+    bl      asm_gpio_init
+    ldr     R0, =GPIO_BTN_EN
+    ldr     R1, =GPIO_DIR_IN
+    bl      gpio_set_dir
+    ldr     R0, =GPIO_BTN_EN
+    bl      asm_gpio_set_irq
+
+    // Initialize the "up" button
+    ldr     R0, =GPIO_BTN_UP
+    bl      asm_gpio_init
+    ldr     R0, =GPIO_BTN_UP
+    ldr     R1, =GPIO_DIR_IN
+    bl      gpio_set_dir
+    ldr     R0, =GPIO_BTN_UP
+    bl      asm_gpio_set_irq
+
+    // Initialize the "down" button
+    ldr     R0, =GPIO_BTN_DN
+    bl      asm_gpio_init
+    ldr     R0, =GPIO_BTN_DN
+    ldr     R1, =GPIO_DIR_IN
+    bl      gpio_set_dir
+    ldr     R0, =GPIO_BTN_DN
+    bl      asm_gpio_set_irq
+
+    pop     {pc}
+
+
+alarm_init:
+    ldr     r3, =(PPB_BASE + M0PLUS_VTOR_OFFSET)
+    ldr     r4, =(PPB_BASE + M0PLUS_NVIC_ISER_OFFSET)
+    ldr     r1, [r3]
+    ldr     r2, =ALRM_ISR_OFFSET
+    adds    r2, r2, r1
+    ldr     r0, =LED_ISR_TOGGLE
+    
+
+    ldr     r4, =(ALARM_ISR_OFFSET)
+    add     r4, r4, r3
+
+
+gpio_init:
+    push   {lr}
+    ldr     r3, =(PPB_BASE + M0PLUS_VTOR_OFFSET)
+    ldr     r4, =(ALARM_ISR_OFFSET)
+    add     r4, r4, r3
+    
+    
+
+    bx      {lr}
 
 .align 4
 msg:    .asciz "Hello World!\n"
