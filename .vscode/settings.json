@@ -1,38 +1,39 @@
 {
-  // These settings tweaks to the cmake plugin will ensure
-  // that you debug using cortex-debug instead of trying to launch
-  // a Pico binary on the host
-  "cmake.statusbar.advanced": {
-    "debug": {
-      "visibility": "hidden"
+  "cmake.options.statusBarVisibility": "hidden",
+  "cmake.options.advanced": {
+    "build": {
+      "statusBarVisibility": "hidden"
     },
     "launch": {
-      "visibility": "default"
+      "statusBarVisibility": "hidden"
     },
-    "launchTarget": {
-      "visibility": "default"
-    },
-    "build": {
-      "visibility": "default"
-    },
-    "buildTarget": {
-      "visibility": "default"
+    "debug": {
+      "statusBarVisibility": "hidden"
     }
   },
-  "cmake.configureEnvironment": {
-    "PICO_SDK_PATH": "/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/pico-sdk"
-  },
-  "cmake.generator": "Unix Makefiles",
+  "cmake.configureOnEdit": true,
+  "cmake.automaticReconfigure": true,
   "cmake.configureOnOpen": true,
-  "cmake.buildBeforeRun": true,
-  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-  "cortex-debug.openocdPath": "tools/opeocd",
-  "cortex-debug.enableTelemetry": false,
-  "cortex-debug.registerUseNaturalFormat": false,
-  "doxygen_runner.doxygen_command": "/opt/homebrew/bin/doxygen",
-  "doxygen_runner.configuration_file_override": "${workspaceRoot}\\Doxyfile",
-  "files.associations": {
-    "*.S": "arm",
-    "*.h": "c"
-  }
+  "cmake.generator": "Unix Makefiles",
+  "cmake.cmakePath": "${userHome}/.pico-sdk/cmake/v3.31.5/bin/cmake",
+  "C_Cpp.debugShortcut": false,
+  "terminal.integrated.env.windows": {
+    "PICO_SDK_PATH": "${env:USERPROFILE}/.pico-sdk/sdk/2.1.1",
+    "PICO_TOOLCHAIN_PATH": "${env:USERPROFILE}/.pico-sdk/toolchain/14_2_Rel1",
+    "Path": "${env:USERPROFILE}/.pico-sdk/toolchain/14_2_Rel1/bin;${env:USERPROFILE}/.pico-sdk/picotool/2.1.1/picotool;${env:USERPROFILE}/.pico-sdk/cmake/v3.31.5/bin;${env:USERPROFILE}/.pico-sdk/ninja/v1.12.1;${env:PATH}"
+  },
+  "terminal.integrated.env.osx": {
+    "PICO_SDK_PATH": "${env:HOME}/.pico-sdk/sdk/2.1.1",
+    "PICO_TOOLCHAIN_PATH": "${env:HOME}/.pico-sdk/toolchain/14_2_Rel1",
+    "PATH": "${env:HOME}/.pico-sdk/toolchain/14_2_Rel1/bin:${env:HOME}/.pico-sdk/picotool/2.1.1/picotool:${env:HOME}/.pico-sdk/cmake/v3.31.5/bin:${env:HOME}/.pico-sdk/ninja/v1.12.1:${env:PATH}"
+  },
+  "terminal.integrated.env.linux": {
+    "PICO_SDK_PATH": "${env:HOME}/.pico-sdk/sdk/2.1.1",
+    "PICO_TOOLCHAIN_PATH": "${env:HOME}/.pico-sdk/toolchain/14_2_Rel1",
+    "PATH": "${env:HOME}/.pico-sdk/toolchain/14_2_Rel1/bin:${env:HOME}/.pico-sdk/picotool/2.1.1/picotool:${env:HOME}/.pico-sdk/cmake/v3.31.5/bin:${env:HOME}/.pico-sdk/ninja/v1.12.1:${env:PATH}"
+  },
+  "raspberry-pi-pico.cmakeAutoConfigure": false,
+  "raspberry-pi-pico.useCmakeTools": true,
+  "raspberry-pi-pico.cmakePath": "${HOME}/.pico-sdk/cmake/v3.31.5/bin/cmake",
+  "raspberry-pi-pico.ninjaPath": "${HOME}/.pico-sdk/ninja/v1.12.1/ninja"
 }
