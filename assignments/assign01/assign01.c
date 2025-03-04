@@ -32,6 +32,7 @@ void asm_gpio_set_irq(uint pin) {
 
 // Main entry point of the application
 int main() {
+    printf("Hello, Pico!\n");      // Basic print to console
     stdio_init_all();              // Initialise all basic IO
     printf("Assignment #1...\n");  // Basic print to console
     main_asm();                    // Jump into the ASM code

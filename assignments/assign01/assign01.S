@@ -36,11 +36,17 @@
 @ Entry point
 main_asm:
     @ Initialize LED pin first
+        @ Initialize LED pin first
     movs    r0, #GPIO_LED_PIN
     bl      asm_gpio_init             @ Initialize GPIO for the LED
     movs    r0, #GPIO_LED_PIN
     movs    r1, #GPIO_DIR_OUT
     bl      asm_gpio_set_dir          @ Set GPIO direction to output
+
+    @ Initially turn the LED off
+    movs    r0, #GPIO_LED_PIN
+    movs    r1, #LED_VAL_OFF
+    bl      asm_gpio_put
     
     @ Initialize interrupt systems
     bl      timer_intrpt_init
@@ -48,16 +54,11 @@ main_asm:
     
     @ Initialize button pins
     bl      button_setup
-    
-    @ Initially turn the LED on
-    movs    r0, #GPIO_LED_PIN
-    movs    r1, #LED_VAL_ON
-    bl      asm_gpio_put
 
 @ Main loop
 central_loop:
     bl      configure_alarm           @ Configure the alarm for flashing
-    wfi                              @ Wait for interrupt
+    wfi                               @ Wait for interrupt
     b       central_loop              @ Repeat indefinitely
 
 @ Setup button GPIOs and enable interrupts
@@ -196,7 +197,6 @@ update_led:
 
 @ Configure the timer alarm
 configure_alarm:
-    @ Enable timer interrupt
     movs    r1, #1
     ldr     r2, =TIMER_BASE + TIMER_INTE_OFFSET
     str     r1, [r2]
@@ -242,35 +242,64 @@ button_event_handler:
 
     b       button_handler_exit
 
-@ Down button handler - slows down blinking (increases timer)
+@ Down button handler - slows down blinking or resets timer
 down_button_handler:
     ldr     r0, =down_pressed
     bl      printf
 
-    @ Only change speed if LED is in flashing state
     ldr     r1, =lstate
     ldr     r0, [r1]
-    cmp     r0, #1
-    bne     reset_handler
+    cmp     r0, #DFLT_STATE_STRT      @ Check if LED is in flashing state (1)
+    beq     slow_down                 @ If flashing, slow down
+    b       reset_handler             @ If not flashing, reset
 
-    @ Get current timer value and double it
+slow_down:
     ldr     r0, =double_msg
     bl      printf
     
     ldr     r1, =ltimer
     ldr     r0, [r1]
-    movs    r2, #1
-    lsls    r0, r0, r2                @ Double the timer value (slower blink)
+    lsls    r0, r0, #1                @ Double the timer value (slower blink)
     
     @ Check if over maximum
     ldr     r2, =MAX_SLEEP_TIME
     cmp     r0, r2
-    str     r0, [r1]                  @ Store new value
-    bls     button_handler_exit
+    bls     down_store                @ If within range, store it
     
-    @ Cap at maximum value
-    ldr     r0, =MAX_SLEEP_TIME
-    str     r0, [r1]
+    ldr     r0, =MAX_SLEEP_TIME       @ Cap at maximum value
+    
+down_store:
+    str     r0, [r1]                  @ Store new value
+    b       button_handler_exit
+
+@ Up button handler - speeds up blinking or resets timer
+up_button_handler:
+    ldr     r0, =up_pressed
+    bl      printf
+
+    ldr     r1, =lstate
+    ldr     r0, [r1]
+    cmp     r0, #DFLT_STATE_STRT      @ Check if LED is in flashing state (1)
+    beq     speed_up                  @ If flashing, speed up
+    b       reset_handler             @ If not flashing, reset
+
+speed_up:
+    ldr     r0, =halve_msg
+    bl      printf
+    
+    ldr     r1, =ltimer
+    ldr     r0, [r1]
+    lsrs    r0, r0, #1                @ Halve the timer value (faster blink)
+    
+    @ Check if under minimum
+    ldr     r2, =MIN_SLEEP_TIME
+    cmp     r0, r2
+    bhs     up_store                  @ If within range, store it
+    
+    ldr     r0, =MIN_SLEEP_TIME       @ Cap at minimum value
+    
+up_store:
+    str     r0, [r1]                  @ Store new value
     b       button_handler_exit
 
 @ Enter button handler - toggles LED state
@@ -295,52 +324,25 @@ enter_button_handler:
 
     b       button_handler_exit
 
-@ Up button handler - speeds up blinking (decreases timer)
-up_button_handler:
-    ldr     r0, =up_pressed
-    bl      printf
-
-    @ Only change speed if LED is in flashing state
-    ldr     r1, =lstate
-    ldr     r0, [r1]
-    cmp     r0, #1
-    bne     reset_handler
-
-    @ Get current timer value and halve it
-    ldr     r0, =halve_msg
-    bl      printf
-    
-    ldr     r1, =ltimer
-    ldr     r0, [r1]
-    movs    r2, #1
-    lsrs    r0, r0, r2                @ Halve the timer value (faster blink)
-    
-    @ Check if under minimum
-    ldr     r2, =MIN_SLEEP_TIME
-    cmp     r0, r2
-    str     r0, [r1]                  @ Store new value
-    bhs     button_handler_exit
-    
-    @ Cap at minimum value
-    ldr     r0, =MIN_SLEEP_TIME
-    str     r0, [r1]
-    b       button_handler_exit
 
 @ Reset timer to default value
 reset_handler:
     ldr     r0, =reset_msg
     bl      printf
 
-    ldr     r0, =ltimer
-    ldr     r1, =DFLT_ALARM_TIME
-    str     r1, [r0]
+    ldr     r1, =ltimer               @ Load ltimer address directly into r1
+    ldr     r0, =DFLT_ALARM_TIME      @ Load default time into r0
+    str     r0, [r1]                  @ Store default time to ltimer
+
 
     b       button_handler_exit
+
 
 button_handler_exit:
     pop     {pc}
 
 .align 4
+msg:            .asciz "Hello World!\n"
 down_pressed:   .asciz "GPIO20 button was pressed\n"
 up_pressed:     .asciz "GPIO22 button was pressed\n"
 enter_pressed:  .asciz "GPIO21 button was pressed\n"
@@ -352,6 +354,6 @@ reset_msg:      .asciz "Flashing rate was reset\n"
 toggle_msg:     .asciz "LED should be toggling\n"
 off_msg:        .asciz "LED should be off\n"
 
-.section .data
-lstate: .word   DFLT_STATE_STRT
+.data
+lstate: .word   DFLT_STATE_STOP
 ltimer: .word   DFLT_ALARM_TIME
