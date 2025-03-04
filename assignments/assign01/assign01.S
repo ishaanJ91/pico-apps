@@ -354,6 +354,6 @@ reset_msg:      .asciz "Flashing rate was reset\n"
 toggle_msg:     .asciz "LED should be toggling\n"
 off_msg:        .asciz "LED should be off\n"
 
-.data
+.data 
 lstate: .word   DFLT_STATE_STOP
 ltimer: .word   DFLT_ALARM_TIME
