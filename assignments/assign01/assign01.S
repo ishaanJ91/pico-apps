@@ -73,7 +73,7 @@ button_setup:
     bl      asm_gpio_set_dir
     movs    r0, #GPIO_BTN_EN
     bl      asm_gpio_set_irq
-
+ 
     @ Initialize up button
     movs    r0, #GPIO_BTN_UP
     bl      asm_gpio_init
