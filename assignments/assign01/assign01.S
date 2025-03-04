@@ -3,7 +3,9 @@
 #include "hardware/regs/timer.h"
 #include "hardware/regs/m0plus.h"
 
-.syntax unified
+@ Initialize GPIO pin
+
+.syntax unified 
 .cpu    cortex-m0plus
 .thumb
 .global main_asm
