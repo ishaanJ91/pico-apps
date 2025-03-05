@@ -3,12 +3,10 @@
 #include "hardware/regs/timer.h"
 #include "hardware/regs/m0plus.h"
 
-@ Initialize GPIO pin
-
 .syntax unified 
 .cpu    cortex-m0plus
 .thumb
-.global main_asm
+.global main_asm 
 .align  4
 
 .equ    DFLT_STATE_STRT, 1            @ Default state to start flashing
