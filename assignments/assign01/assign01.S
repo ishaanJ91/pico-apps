@@ -9,7 +9,7 @@
 .thumb
 .global main_asm 
 .align  4
-
+ @comments
 .equ    DFLT_STATE_STRT, 1            @ Default state to start flashing
 .equ    DFLT_STATE_STOP, 0            @ Default state to stop flashing
 .equ    DFLT_ALARM_TIME, 1000000      @ Default alarm timeout in microseconds
