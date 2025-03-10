@@ -17,8 +17,8 @@
 
 @ Entry point to the ASM portion of the program
 main_asm:
-    bl      init_gpio_led       @ Initialise the GPIO LED pin
     bl      install_svc_isr     @ Install the SVC interrupt service routine
+    bl      init_gpio_led       @ Initialise the GPIO LED pin
 
 loop:
     svc     #0                  @ Call the SVC ISR with value 0 (turns on LED)
@@ -31,16 +31,18 @@ loop:
 
 @ Subroutine used to introduce a short delay in the application
 do_sleep:
-    movs    r0, #SLEEP_TIME      @ Load the sleep time into register r0
+    push    {lr}                 @ Save the link register
+    ldr     r0, =SLEEP_TIME      @ Load the sleep time into register r0
     bl      sleep_ms             @ Call the sleep_ms function
-    bx      lr   
+    pop     {pc}                 @ Return from subroutine
 
 @ Subroutine used to initialise the PI Pico built-in LED
 init_gpio_led:
-    movs    r0, #GPIO_LED_PIN          @ Load GPIO pin for LED
+    push    {lr}                       @ Save the link register
+    movs    r0, #LED_GPIO_PIN          @ Load GPIO pin for LED
     bl      asm_gpio_init              @ Call GPIO init function for LED
-    movs    r0, #GPIO_LED_PIN          @ Load GPIO pin again
-    movs    r1, #GPIO_DIR_OUT          @ Set pin direction to output
+    movs    r0, #LED_GPIO_PIN          @ Load GPIO pin again
+    movs    r1, #LED_GPIO_OUT          @ Set pin direction to output
     bl      asm_gpio_set_dir           @ Call GPIO set direction function
     pop     {pc}                       @ Return from subroutine
 
@@ -76,13 +78,18 @@ svc_done:
 
 @ First function of SVC subroutine - turn on the LED
 svc_num0:
-    movs    r1, #LED_VALUE_ON           @ The LED is currently "off" so we want to turn it "on"
-    b       svc_done                    @ Branch back to the main ISR when done
+    movs    r1, #LED_VALUE_ON       @ Load the value for LED on into r1
+    movs    r0, #LED_GPIO_PIN       @ Load the gpio pin into r0
+    bl      asm_gpio_put            @ Call the function to set the LED
+    b       svc_done                @ Branch back to the main ISR when done
+
 
 @ Second function of SVC subroutine - turn off the LED
 svc_num1:
-    movs    r1, #LED_VALUE_OFF          @ The LED is currently "on" so we want to turn it "off"
-    b       svc_done                    @ Branch back to the main ISR when done
+    movs    r1, #LED_VALUE_OFF      @ Load the value for LED off into r1
+    movs    r0, #LED_GPIO_PIN       @ Load the gpio pin into r0
+    bl      asm_gpio_put            @ Call the function to set the LED
+    b       svc_done                @ Branch back to the main ISR when done
 
 @ SVC function entry jump table.
 .align 2
