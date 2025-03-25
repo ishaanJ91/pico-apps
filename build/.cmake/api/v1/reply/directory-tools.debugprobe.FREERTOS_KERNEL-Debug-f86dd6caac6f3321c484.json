@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "tools/debugprobe/FREERTOS_KERNEL",
+		"source" : "tools/debugprobe/freertos/portable/ThirdParty/GCC/RP2040"
+	}
+}
