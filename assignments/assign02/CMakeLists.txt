@@ -1,3 +1,5 @@
+# include(../../pico-sdk/pico_sdk_init.cmake)
+include(../../pico_sdk_import.cmake)
 # Specify the name of the executable.
 add_executable(assign02)
 
@@ -12,3 +14,6 @@ pico_add_extra_outputs(assign02)
 
 # Add the URL via pico_set_program_url.
 apps_auto_set_url(assign02)
+
+pico_enable_stdio_usb(assign02 1)
+pico_enable_stdio_uart(assign02 0)

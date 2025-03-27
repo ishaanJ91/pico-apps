@@ -1,133 +1,156 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "pico/float.h"     // Required for using single-precision variables.
-#include "pico/double.h"    // Required for using double-precision variables.
+#include <string.h>
 #include "pico/stdlib.h"
+#include "pico/float.h"
+#include "pico/double.h"
 #include "pico/multicore.h"
-#include "hardware/timer.h"
-
-uint64_t single_core_time = 0;
-uint64_t double_core_time = 0;
+#include "pico/time.h"
 
 /**
- * @brief Calculates Pi using single precision (float).
- * 
- * @param iterations Number of iterations to approximate Pi.
- * @return float Approximate value of Pi.
+ * @brief Check if the XIP cache is currently enabled.
+ *
+ * @return bool True if the cache is enabled, otherwise false.
  */
-
-//  Function for Single Precision Calculation of Pi
-float single_precision(int iterations, float pi_f_original) {
-    float pi = 1.0f;
-
-    // Loop through the number of iterations to approximate Pi
-    for (int i = 1; i < iterations; i++) {
-        float fraction_one = (2.0f * i) / ((2.0f * i) - 1.0f);
-        float fraction_two = (2.0f * i) / ((2.0f * i) + 1.0f); 
-
-        pi *= fraction_one * fraction_two;
-    }
-
-    pi *= 2.0f;  // Final multiplication to approximate Pi
-
-    float error = ((pi_f_original - pi) / pi_f_original) * 100.0f; // Calculate the approximation error
-
-    return pi;
+bool is_cache_enabled() {
+    volatile uint32_t *ctrl = (volatile uint32_t *)XIP_CTRL_BASE;
+    return ctrl[0];
 }
 
 /**
- * @brief Calculates Pi using double precision (double).
- * 
- * @param iterations Number of iterations to approximate Pi.
- * @return double Approximate value of Pi.
+ * @brief Enable or disable XIP cache.
+ *
+ * @param enable If true, enables the cache; if false, disables it.
+ * @return bool True if the cache is enabled after the operation, otherwise false.
  */
+bool toggle_cache(bool enable) {
+    uint32_t *ctrl = (uint32_t *)XIP_CTRL_BASE;
+    ctrl[0] = enable;
+    return is_cache_enabled();
+}
 
-//  Function for Double Precision Calculation of Pi
-double double_precision(int iterations, double pi_d_original) {
-    double pi = 1.0;
-
-    // Loop through the number of iterations to approximate Pi
-    for (int i = 1; i < iterations; i++) {
-        double fraction_one = (2.0 * i) / ((2.0 * i) - 1.0);
-        double fraction_two = (2.0 * i) / ((2.0 * i) + 1.0); 
-
-        pi *= fraction_one * fraction_two;
+/**
+ * @brief Compute PI approximation using Wallis product (single-precision).
+ *
+ * @param iterations The number of iterations to perform in the approximation.
+ * @return float The approximated value of PI.
+ */
+float compute_pi_float(int iterations) {
+    absolute_time_t start = get_absolute_time(); // Start timer for float PI computation
+    float product = 1.0f;
+    for (int i = 1; i <= iterations; i++) {
+        float n = 4.0f * i * i;
+        product *= (n / (n - 1.0f)) * 2.0f;
     }
-
-    pi *= 2.0;  // Final multiplication to approximate Pi
-
-    // Calculate the approximation error
-    double error = ((pi_d_original - pi) / pi_d_original) * 100.0; // Calculate the approximation error
-
-    return pi;
+    absolute_time_t stop = get_absolute_time(); // End timer for float PI computation
+    printf("[FLOAT] Cache: %d | Time: %llu us\n", is_cache_enabled(), absolute_time_diff_us(start, stop));
+    return product;
 }
 
-int32_t run_single_precision(int32_t iterations) {
-    uint64_t start = time_us_64();
-    float pi = single_precision(iterations, 3.14159265359f);
-    single_core_time = time_us_64() - start;
-    return (int32_t)(pi * 1000000); // Return scaled result
+/**
+ * @brief Compute PI approximation using Wallis product (double-precision).
+ *
+ * @param iterations The number of iterations to perform in the approximation.
+ * @return double The approximated value of PI.
+ */
+double compute_pi_double(int iterations) {
+    absolute_time_t start = get_absolute_time(); // Start timer for double PI computation
+    double product = 1.0;
+    for (int i = 1; i <= iterations; i++) {
+        double n = 4.0 * i * i;
+        product *= (n / (n - 1.0)) * 2.0;
+    }
+    absolute_time_t stop = get_absolute_time(); // End timer for double PI computation
+    printf("[DOUBLE] Cache: %d | Time: %llu us\n", is_cache_enabled(), absolute_time_diff_us(start, stop));
+    return product;
 }
 
-int32_t run_double_precision(int32_t iterations) {
-    uint64_t start = time_us_64();
-    double pi = double_precision(iterations, 3.14159265359);
-    double_core_time = time_us_64() - start;
-    return (int32_t)(pi * 1000000); // Return scaled result
-}
-
-void core1_entry() {
+/**
+ * @brief Core1 entry: receives function pointer and runs float PI computation.
+ *
+ * This function runs in a separate core and processes PI computations 
+ * based on the function pointer received through the FIFO.
+ */
+void core1_worker() {
     while (1) {
-        int32_t (*func)() = (int32_t(*)()) multicore_fifo_pop_blocking();
-        int32_t p = multicore_fifo_pop_blocking();
-        int32_t result = (*func)(p);
-        multicore_fifo_push_blocking(result);
+        uintptr_t ptr = multicore_fifo_pop_blocking();
+        int arg = multicore_fifo_pop_blocking();
+
+        float (*func)(int) = (float (*)(int))ptr;
+        float result = func(arg);
+
+        int32_t packed;
+        memcpy(&packed, &result, sizeof(result));
+        multicore_fifo_push_blocking(packed);
     }
 }
 
 /**
- * @brief The main function initializes the system.
+ * @brief Main function to execute the PI approximation computations.
  *
- * main() calculates the value of pi using both float and double precision, computes the approximation
- * error, and prints the results.
+ * This function initializes the system, manages cache settings, and 
+ * executes both sequential and parallel computations for PI.
  *
- * @return int, Returns 0 upon successful execution.
+ * @return int Exit status of the program.
  */
-
 int main() {
-    const int ITER_MAX = 100000;
+    const int MAX_ITER = 100000;
+
     stdio_init_all();
-    sleep_ms(1000);
-    multicore_launch_core1(core1_entry);
+    // Launch core1 to handle parallel float PI computation
+    sleep_ms(2000); // Allow time for USB console
 
-    // Sequential Run
-    uint64_t start_seq = time_us_64();
-    float pi_f = single_precision(ITER_MAX, 3.14159265359f);
-    double pi_d = double_precision(ITER_MAX, 3.14159265359);
-    uint64_t end_seq = time_us_64();
-    uint64_t duration_seq = end_seq - start_seq;
+    multicore_launch_core1(core1_worker);
 
-    printf("Sequential Run:\n");
-    printf("  Single Precision: %.10f\n", pi_f);
-    printf("  Double Precision: %.15f\n", pi_d);
-    printf("  Total Time: %llu us\n", duration_seq);
+    absolute_time_t start, end;
+    float pi_f_seq, pi_f_par;
+    double pi_d_seq, pi_d_par;
+    uint64_t time_seq, time_par;
 
-    // Parallel Run
-    uint64_t start_par = time_us_64();
-    multicore_fifo_push_blocking((uintptr_t)run_double_precision);
-    multicore_fifo_push_blocking(ITER_MAX);
-    int32_t pi_f_scaled = run_single_precision(ITER_MAX);
-    int32_t pi_d_scaled = multicore_fifo_pop_blocking();
-    uint64_t end_par = time_us_64();
-    uint64_t duration_par = end_par - start_par;
+    // ---------- No Cache ----------
+    toggle_cache(false); // Disable cache for performance measurement
+    printf("\n[NO CACHE] Sequential Execution\n");
+    start = get_absolute_time();
+    pi_f_seq = compute_pi_float(MAX_ITER);
+    pi_d_seq = compute_pi_double(MAX_ITER);
+    end = get_absolute_time();
+    time_seq = absolute_time_diff_us(start, end);
+    printf("Total sequential time: %llu us\n\n", time_seq);
 
-    printf("\nParallel Run:\n");
-    printf("  Single Precision: %.10f (Time: %llu us)\n", pi_f_scaled / 1000000.0, single_core_time);
-    printf("  Double Precision: %.15f (Time: %llu us)\n", pi_d_scaled / 1000000.0, double_core_time);
-    printf("  Total Time: %llu us\n", duration_par);
+    printf("[NO CACHE] Parallel Execution\n");
+    start = get_absolute_time();
+    // Push function pointer and argument to core1 for parallel execution
+    multicore_fifo_push_blocking((uintptr_t)&compute_pi_float); // Send compute_pi_float function pointer to core1
+    multicore_fifo_push_blocking(MAX_ITER); // Send argument (MAX_ITER) to core1
+    pi_d_par = compute_pi_double(MAX_ITER);
+    int32_t packed_result = multicore_fifo_pop_blocking(); // Retrieve packed result from core1
+    memcpy(&pi_f_par, &packed_result, sizeof(packed_result)); // Unpack result from core1 into pi_f_par
+    end = get_absolute_time();
+    time_par = absolute_time_diff_us(start, end);
+    printf("Total parallel time: %llu us\n\n", time_par);
 
-    // Returning zero indicates everything went okay.
+    // ---------- With Cache ----------
+    toggle_cache(true);
+    printf("\n[CACHE ENABLED] Sequential Execution\n");
+    start = get_absolute_time();
+    pi_f_seq = compute_pi_float(MAX_ITER);
+    pi_d_seq = compute_pi_double(MAX_ITER);
+    end = get_absolute_time();
+    time_seq = absolute_time_diff_us(start, end);
+    printf("Total sequential time: %llu us\n\n", time_seq);
+
+    printf("[CACHE ENABLED] Parallel Execution\n");
+    start = get_absolute_time();
+    // Push function pointer and argument to core1 for parallel execution with cache enabled
+    multicore_fifo_push_blocking((uintptr_t)&compute_pi_float); // Send compute_pi_float function pointer to core1
+    multicore_fifo_push_blocking(MAX_ITER); // Send argument (MAX_ITER) to core1
+    pi_d_par = compute_pi_double(MAX_ITER);
+    packed_result = multicore_fifo_pop_blocking(); // Retrieve packed result from core1
+    memcpy(&pi_f_par, &packed_result, sizeof(packed_result)); // Unpack result from core1 into pi_f_par
+    end = get_absolute_time();
+    time_par = absolute_time_diff_us(start, end);
+    printf("Total parallel time: %llu us\n\n", time_par);
+
     return 0;
 }

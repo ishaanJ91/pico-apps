@@ -2184,6 +2184,7 @@ labs/lab07/CMakeFiles/lab07.dir/lab07.c.o: /Users/macncheese/Desktop/University_
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/alloca.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/assert.h \
+  /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/inttypes.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/machine/_types.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
@@ -2194,6 +2195,7 @@ labs/lab07/CMakeFiles/lab07.dir/lab07.c.o: /Users/macncheese/Desktop/University_
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/stdio.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/stdlib.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/sys/_types.h \
   /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
@@ -2428,6 +2430,8 @@ labs/lab07/CMakeFiles/lab07.dir/lab07.c.o: /Users/macncheese/Desktop/University_
 /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
 
 /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_util/pheap.c:
+
+/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/inttypes.h:
 
 /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/math.h:
 

@@ -2802,12 +2802,12 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num= "Built target bs2_default_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=23 "Built target bs2_default_bin"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule
@@ -2819,7 +2819,7 @@ bs2_default_bin: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/
 # codegen rule for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/codegen: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num= "Finished codegen for target bs2_default_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=23 "Finished codegen for target bs2_default_bin"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/codegen
 
 # clean rule for target.
@@ -2930,12 +2930,12 @@ assignments/assign01/CMakeFiles/assign01.dir/clean:
 assignments/assign02/CMakeFiles/assign02.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f assignments/assign02/CMakeFiles/assign02.dir/build.make assignments/assign02/CMakeFiles/assign02.dir/depend
 	$(MAKE) $(MAKESILENT) -f assignments/assign02/CMakeFiles/assign02.dir/build.make assignments/assign02/CMakeFiles/assign02.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target assign02"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=6,7,8,9,10,11,12 "Built target assign02"
 .PHONY : assignments/assign02/CMakeFiles/assign02.dir/all
 
 # Build rule for subdir invocation for target.
 assignments/assign02/CMakeFiles/assign02.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assignments/assign02/CMakeFiles/assign02.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 0
 .PHONY : assignments/assign02/CMakeFiles/assign02.dir/rule
@@ -2947,7 +2947,7 @@ assign02: assignments/assign02/CMakeFiles/assign02.dir/rule
 # codegen rule for target.
 assignments/assign02/CMakeFiles/assign02.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f assignments/assign02/CMakeFiles/assign02.dir/build.make assignments/assign02/CMakeFiles/assign02.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=6,7,8,9,10 "Finished codegen for target assign02"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=6,7,8,9,10,11,12 "Finished codegen for target assign02"
 .PHONY : assignments/assign02/CMakeFiles/assign02.dir/codegen
 
 # clean rule for target.
@@ -2962,12 +2962,12 @@ assignments/assign02/CMakeFiles/assign02.dir/clean:
 examples/blink_c/CMakeFiles/blink_c.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/blink_c/CMakeFiles/blink_c.dir/build.make examples/blink_c/CMakeFiles/blink_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/blink_c/CMakeFiles/blink_c.dir/build.make examples/blink_c/CMakeFiles/blink_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=16,17,18,19,20,21 "Built target blink_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=18,19,20,21,22 "Built target blink_c"
 .PHONY : examples/blink_c/CMakeFiles/blink_c.dir/all
 
 # Build rule for subdir invocation for target.
 examples/blink_c/CMakeFiles/blink_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/blink_c/CMakeFiles/blink_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 0
 .PHONY : examples/blink_c/CMakeFiles/blink_c.dir/rule
@@ -2979,7 +2979,7 @@ blink_c: examples/blink_c/CMakeFiles/blink_c.dir/rule
 # codegen rule for target.
 examples/blink_c/CMakeFiles/blink_c.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f examples/blink_c/CMakeFiles/blink_c.dir/build.make examples/blink_c/CMakeFiles/blink_c.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=16,17,18,19,20,21 "Finished codegen for target blink_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=18,19,20,21,22 "Finished codegen for target blink_c"
 .PHONY : examples/blink_c/CMakeFiles/blink_c.dir/codegen
 
 # clean rule for target.
@@ -2994,7 +2994,7 @@ examples/blink_c/CMakeFiles/blink_c.dir/clean:
 examples/hello_c/CMakeFiles/hello_c.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/hello_c/CMakeFiles/hello_c.dir/build.make examples/hello_c/CMakeFiles/hello_c.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/hello_c/CMakeFiles/hello_c.dir/build.make examples/hello_c/CMakeFiles/hello_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=32,33,34,35,36 "Built target hello_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=33,34,35,36,37 "Built target hello_c"
 .PHONY : examples/hello_c/CMakeFiles/hello_c.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3011,7 +3011,7 @@ hello_c: examples/hello_c/CMakeFiles/hello_c.dir/rule
 # codegen rule for target.
 examples/hello_c/CMakeFiles/hello_c.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f examples/hello_c/CMakeFiles/hello_c.dir/build.make examples/hello_c/CMakeFiles/hello_c.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=32,33,34,35,36 "Finished codegen for target hello_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=33,34,35,36,37 "Finished codegen for target hello_c"
 .PHONY : examples/hello_c/CMakeFiles/hello_c.dir/codegen
 
 # clean rule for target.
@@ -3058,7 +3058,7 @@ examples/multi_c/CMakeFiles/multi_c.dir/clean:
 examples/blink_asm/CMakeFiles/blink_asm.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/blink_asm/CMakeFiles/blink_asm.dir/build.make examples/blink_asm/CMakeFiles/blink_asm.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/blink_asm/CMakeFiles/blink_asm.dir/build.make examples/blink_asm/CMakeFiles/blink_asm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=11,12,13,14,15 "Built target blink_asm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=13,14,15,16,17 "Built target blink_asm"
 .PHONY : examples/blink_asm/CMakeFiles/blink_asm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3075,7 +3075,7 @@ blink_asm: examples/blink_asm/CMakeFiles/blink_asm.dir/rule
 # codegen rule for target.
 examples/blink_asm/CMakeFiles/blink_asm.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f examples/blink_asm/CMakeFiles/blink_asm.dir/build.make examples/blink_asm/CMakeFiles/blink_asm.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=11,12,13,14,15 "Finished codegen for target blink_asm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=13,14,15,16,17 "Finished codegen for target blink_asm"
 .PHONY : examples/blink_asm/CMakeFiles/blink_asm.dir/codegen
 
 # clean rule for target.
@@ -3087,8 +3087,8 @@ examples/blink_asm/CMakeFiles/blink_asm.dir/clean:
 # Target rules for target examples/ws2812_rgb/CMakeFiles/ws2812_rgb.dir
 
 # All Build rule for target.
-examples/ws2812_rgb/CMakeFiles/ws2812_rgb.dir/all: examples/ws2812_rgb/CMakeFiles/ws2812_rgb_ws2812_pio_h.dir/all
 examples/ws2812_rgb/CMakeFiles/ws2812_rgb.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
+examples/ws2812_rgb/CMakeFiles/ws2812_rgb.dir/all: examples/ws2812_rgb/CMakeFiles/ws2812_rgb_ws2812_pio_h.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/ws2812_rgb/CMakeFiles/ws2812_rgb.dir/build.make examples/ws2812_rgb/CMakeFiles/ws2812_rgb.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/ws2812_rgb/CMakeFiles/ws2812_rgb.dir/build.make examples/ws2812_rgb/CMakeFiles/ws2812_rgb.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=95,96,97,98,99 "Built target ws2812_rgb"
@@ -3155,7 +3155,7 @@ examples/ws2812_rgb/CMakeFiles/ws2812_rgb_ws2812_pio_h.dir/clean:
 labs/lab01/CMakeFiles/lab01.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f labs/lab01/CMakeFiles/lab01.dir/build.make labs/lab01/CMakeFiles/lab01.dir/depend
 	$(MAKE) $(MAKESILENT) -f labs/lab01/CMakeFiles/lab01.dir/build.make labs/lab01/CMakeFiles/lab01.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=37,38,39,40,41 "Built target lab01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=38,39,40,41,42 "Built target lab01"
 .PHONY : labs/lab01/CMakeFiles/lab01.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3172,7 +3172,7 @@ lab01: labs/lab01/CMakeFiles/lab01.dir/rule
 # codegen rule for target.
 labs/lab01/CMakeFiles/lab01.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f labs/lab01/CMakeFiles/lab01.dir/build.make labs/lab01/CMakeFiles/lab01.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=37,38,39,40,41 "Finished codegen for target lab01"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=38,39,40,41,42 "Finished codegen for target lab01"
 .PHONY : labs/lab01/CMakeFiles/lab01.dir/codegen
 
 # clean rule for target.
@@ -3187,7 +3187,7 @@ labs/lab01/CMakeFiles/lab01.dir/clean:
 labs/lab02/CMakeFiles/lab02.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f labs/lab02/CMakeFiles/lab02.dir/build.make labs/lab02/CMakeFiles/lab02.dir/depend
 	$(MAKE) $(MAKESILENT) -f labs/lab02/CMakeFiles/lab02.dir/build.make labs/lab02/CMakeFiles/lab02.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=42,43,44,45,46 "Built target lab02"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=43,44,45,46,47 "Built target lab02"
 .PHONY : labs/lab02/CMakeFiles/lab02.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3204,7 +3204,7 @@ lab02: labs/lab02/CMakeFiles/lab02.dir/rule
 # codegen rule for target.
 labs/lab02/CMakeFiles/lab02.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f labs/lab02/CMakeFiles/lab02.dir/build.make labs/lab02/CMakeFiles/lab02.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=42,43,44,45,46 "Finished codegen for target lab02"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=43,44,45,46,47 "Finished codegen for target lab02"
 .PHONY : labs/lab02/CMakeFiles/lab02.dir/codegen
 
 # clean rule for target.
@@ -3219,7 +3219,7 @@ labs/lab02/CMakeFiles/lab02.dir/clean:
 labs/lab03/CMakeFiles/lab03.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f labs/lab03/CMakeFiles/lab03.dir/build.make labs/lab03/CMakeFiles/lab03.dir/depend
 	$(MAKE) $(MAKESILENT) -f labs/lab03/CMakeFiles/lab03.dir/build.make labs/lab03/CMakeFiles/lab03.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=47,48,49,50,51,52 "Built target lab03"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=48,49,50,51,52,53 "Built target lab03"
 .PHONY : labs/lab03/CMakeFiles/lab03.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3236,7 +3236,7 @@ lab03: labs/lab03/CMakeFiles/lab03.dir/rule
 # codegen rule for target.
 labs/lab03/CMakeFiles/lab03.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f labs/lab03/CMakeFiles/lab03.dir/build.make labs/lab03/CMakeFiles/lab03.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=47,48,49,50,51,52 "Finished codegen for target lab03"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=48,49,50,51,52,53 "Finished codegen for target lab03"
 .PHONY : labs/lab03/CMakeFiles/lab03.dir/codegen
 
 # clean rule for target.
@@ -3251,7 +3251,7 @@ labs/lab03/CMakeFiles/lab03.dir/clean:
 labs/lab04/CMakeFiles/lab04.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f labs/lab04/CMakeFiles/lab04.dir/build.make labs/lab04/CMakeFiles/lab04.dir/depend
 	$(MAKE) $(MAKESILENT) -f labs/lab04/CMakeFiles/lab04.dir/build.make labs/lab04/CMakeFiles/lab04.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=53,54,55,56,57 "Built target lab04"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=54,55,56,57,58 "Built target lab04"
 .PHONY : labs/lab04/CMakeFiles/lab04.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3268,7 +3268,7 @@ lab04: labs/lab04/CMakeFiles/lab04.dir/rule
 # codegen rule for target.
 labs/lab04/CMakeFiles/lab04.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f labs/lab04/CMakeFiles/lab04.dir/build.make labs/lab04/CMakeFiles/lab04.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=53,54,55,56,57 "Finished codegen for target lab04"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=54,55,56,57,58 "Finished codegen for target lab04"
 .PHONY : labs/lab04/CMakeFiles/lab04.dir/codegen
 
 # clean rule for target.
@@ -3283,7 +3283,7 @@ labs/lab04/CMakeFiles/lab04.dir/clean:
 labs/lab05/CMakeFiles/lab05.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f labs/lab05/CMakeFiles/lab05.dir/build.make labs/lab05/CMakeFiles/lab05.dir/depend
 	$(MAKE) $(MAKESILENT) -f labs/lab05/CMakeFiles/lab05.dir/build.make labs/lab05/CMakeFiles/lab05.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=58,59,60,61,62 "Built target lab05"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=59,60,61,62,63 "Built target lab05"
 .PHONY : labs/lab05/CMakeFiles/lab05.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3300,7 +3300,7 @@ lab05: labs/lab05/CMakeFiles/lab05.dir/rule
 # codegen rule for target.
 labs/lab05/CMakeFiles/lab05.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f labs/lab05/CMakeFiles/lab05.dir/build.make labs/lab05/CMakeFiles/lab05.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=58,59,60,61,62 "Finished codegen for target lab05"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=59,60,61,62,63 "Finished codegen for target lab05"
 .PHONY : labs/lab05/CMakeFiles/lab05.dir/codegen
 
 # clean rule for target.
@@ -3315,12 +3315,12 @@ labs/lab05/CMakeFiles/lab05.dir/clean:
 labs/lab06/CMakeFiles/lab06.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f labs/lab06/CMakeFiles/lab06.dir/build.make labs/lab06/CMakeFiles/lab06.dir/depend
 	$(MAKE) $(MAKESILENT) -f labs/lab06/CMakeFiles/lab06.dir/build.make labs/lab06/CMakeFiles/lab06.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=63,64,65,66,67,68 "Built target lab06"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=64,65,66,67,68 "Built target lab06"
 .PHONY : labs/lab06/CMakeFiles/lab06.dir/all
 
 # Build rule for subdir invocation for target.
 labs/lab06/CMakeFiles/lab06.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 labs/lab06/CMakeFiles/lab06.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 0
 .PHONY : labs/lab06/CMakeFiles/lab06.dir/rule
@@ -3332,7 +3332,7 @@ lab06: labs/lab06/CMakeFiles/lab06.dir/rule
 # codegen rule for target.
 labs/lab06/CMakeFiles/lab06.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f labs/lab06/CMakeFiles/lab06.dir/build.make labs/lab06/CMakeFiles/lab06.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=63,64,65,66,67,68 "Finished codegen for target lab06"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=64,65,66,67,68 "Finished codegen for target lab06"
 .PHONY : labs/lab06/CMakeFiles/lab06.dir/codegen
 
 # clean rule for target.
@@ -3379,12 +3379,12 @@ labs/lab07/CMakeFiles/lab07.dir/clean:
 labs/lab08/CMakeFiles/lab08.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f labs/lab08/CMakeFiles/lab08.dir/build.make labs/lab08/CMakeFiles/lab08.dir/depend
 	$(MAKE) $(MAKESILENT) -f labs/lab08/CMakeFiles/lab08.dir/build.make labs/lab08/CMakeFiles/lab08.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=74,75,76,77,78 "Built target lab08"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=74,75,76,77,78,79 "Built target lab08"
 .PHONY : labs/lab08/CMakeFiles/lab08.dir/all
 
 # Build rule for subdir invocation for target.
 labs/lab08/CMakeFiles/lab08.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 labs/lab08/CMakeFiles/lab08.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 0
 .PHONY : labs/lab08/CMakeFiles/lab08.dir/rule
@@ -3396,7 +3396,7 @@ lab08: labs/lab08/CMakeFiles/lab08.dir/rule
 # codegen rule for target.
 labs/lab08/CMakeFiles/lab08.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f labs/lab08/CMakeFiles/lab08.dir/build.make labs/lab08/CMakeFiles/lab08.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=74,75,76,77,78 "Finished codegen for target lab08"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=74,75,76,77,78,79 "Finished codegen for target lab08"
 .PHONY : labs/lab08/CMakeFiles/lab08.dir/codegen
 
 # clean rule for target.
@@ -3411,12 +3411,12 @@ labs/lab08/CMakeFiles/lab08.dir/clean:
 labs/lab09/CMakeFiles/lab09.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f labs/lab09/CMakeFiles/lab09.dir/build.make labs/lab09/CMakeFiles/lab09.dir/depend
 	$(MAKE) $(MAKESILENT) -f labs/lab09/CMakeFiles/lab09.dir/build.make labs/lab09/CMakeFiles/lab09.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=79,80,81,82,83,84 "Built target lab09"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=80,81,82,83,84 "Built target lab09"
 .PHONY : labs/lab09/CMakeFiles/lab09.dir/all
 
 # Build rule for subdir invocation for target.
 labs/lab09/CMakeFiles/lab09.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 labs/lab09/CMakeFiles/lab09.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 0
 .PHONY : labs/lab09/CMakeFiles/lab09.dir/rule
@@ -3428,7 +3428,7 @@ lab09: labs/lab09/CMakeFiles/lab09.dir/rule
 # codegen rule for target.
 labs/lab09/CMakeFiles/lab09.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f labs/lab09/CMakeFiles/lab09.dir/build.make labs/lab09/CMakeFiles/lab09.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=79,80,81,82,83,84 "Finished codegen for target lab09"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=80,81,82,83,84 "Finished codegen for target lab09"
 .PHONY : labs/lab09/CMakeFiles/lab09.dir/codegen
 
 # clean rule for target.
@@ -3472,17 +3472,17 @@ labs/lab10/CMakeFiles/lab10.dir/clean:
 # Target rules for target tools/debugprobe/CMakeFiles/debugprobe.dir
 
 # All Build rule for target.
+tools/debugprobe/CMakeFiles/debugprobe.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 tools/debugprobe/CMakeFiles/debugprobe.dir/all: tools/debugprobe/CMakeFiles/debugprobe_probe_pio_h.dir/all
 tools/debugprobe/CMakeFiles/debugprobe.dir/all: tools/debugprobe/CMakeFiles/debugprobe_probe_oen_pio_h.dir/all
-tools/debugprobe/CMakeFiles/debugprobe.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/debugprobe/CMakeFiles/debugprobe.dir/build.make tools/debugprobe/CMakeFiles/debugprobe.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/debugprobe/CMakeFiles/debugprobe.dir/build.make tools/debugprobe/CMakeFiles/debugprobe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=22,23,24,25,26,27,28,29,30,31 "Built target debugprobe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=24,25,26,27,28,29,30,31,32 "Built target debugprobe"
 .PHONY : tools/debugprobe/CMakeFiles/debugprobe.dir/all
 
 # Build rule for subdir invocation for target.
 tools/debugprobe/CMakeFiles/debugprobe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/debugprobe/CMakeFiles/debugprobe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles 0
 .PHONY : tools/debugprobe/CMakeFiles/debugprobe.dir/rule
@@ -3495,7 +3495,7 @@ debugprobe: tools/debugprobe/CMakeFiles/debugprobe.dir/rule
 tools/debugprobe/CMakeFiles/debugprobe.dir/codegen: tools/debugprobe/CMakeFiles/debugprobe_probe_pio_h.dir/all
 tools/debugprobe/CMakeFiles/debugprobe.dir/codegen: tools/debugprobe/CMakeFiles/debugprobe_probe_oen_pio_h.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/debugprobe/CMakeFiles/debugprobe.dir/build.make tools/debugprobe/CMakeFiles/debugprobe.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=22,23,24,25,26,27,28,29,30,31 "Finished codegen for target debugprobe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/CMakeFiles --progress-num=24,25,26,27,28,29,30,31,32 "Finished codegen for target debugprobe"
 .PHONY : tools/debugprobe/CMakeFiles/debugprobe.dir/codegen
 
 # clean rule for target.

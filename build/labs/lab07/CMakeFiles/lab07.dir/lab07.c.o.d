@@ -21,8 +21,11 @@ labs/lab07/CMakeFiles/lab07.dir/lab07.c.o: \
  /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
  /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/alloca.h \
  /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/math.h \
- /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_float/include/pico/float.h \
- /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/lib/gcc/arm-none-eabi/14.2.1/include/float.h \
+ /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/string.h \
+ /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
+ /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/strings.h \
+ /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/arm-none-eabi/include/sys/string.h \
+ /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_stdlib_headers/include/pico/stdlib.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_base_headers/include/pico.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_base_headers/include/pico/types.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_base_headers/include/pico/assert.h \
@@ -46,9 +49,6 @@ labs/lab07/CMakeFiles/lab07.dir/lab07.c.o: \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_base_headers/include/pico/error.h \
- /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_bootrom/include/pico/bootrom/sf_table.h \
- /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/include/pico/double.h \
- /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_stdlib_headers/include/pico/stdlib.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_stdio/include/pico/stdio.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_time/include/pico/time.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_timer/include/hardware/timer.h \
@@ -77,6 +77,10 @@ labs/lab07/CMakeFiles/lab07.dir/lab07.c.o: \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+ /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_float/include/pico/float.h \
+ /Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/lib/gcc/arm-none-eabi/14.2.1/include/float.h \
+ /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_bootrom/include/pico/bootrom/sf_table.h \
+ /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/include/pico/double.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_multicore/include/pico/multicore.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_sync/include/pico/sync.h \
  /Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_sync/include/pico/sem.h \
