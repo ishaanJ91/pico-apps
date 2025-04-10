@@ -200,6 +200,7 @@
 /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/assignments/assign01/CMakeFiles/edit_cache.dir
 /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/assignments/assign01/CMakeFiles/rebuild_cache.dir
 /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/assignments/assign02/CMakeFiles/assign02.dir
+/Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/assignments/assign02/CMakeFiles/assign02_ws2812_pio_h.dir
 /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/assignments/assign02/CMakeFiles/edit_cache.dir
 /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/assignments/assign02/CMakeFiles/rebuild_cache.dir
 /Users/macncheese/Desktop/University_24/Second/Microprocessors/pico-apps/build/examples/CMakeFiles/edit_cache.dir

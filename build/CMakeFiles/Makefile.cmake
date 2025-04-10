@@ -339,6 +339,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/DependInfo.cmake"
   "assignments/assign01/CMakeFiles/assign01.dir/DependInfo.cmake"
   "assignments/assign02/CMakeFiles/assign02.dir/DependInfo.cmake"
+  "assignments/assign02/CMakeFiles/assign02_ws2812_pio_h.dir/DependInfo.cmake"
   "examples/blink_c/CMakeFiles/blink_c.dir/DependInfo.cmake"
   "examples/hello_c/CMakeFiles/hello_c.dir/DependInfo.cmake"
   "examples/multi_c/CMakeFiles/multi_c.dir/DependInfo.cmake"

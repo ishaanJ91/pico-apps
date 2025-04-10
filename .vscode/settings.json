@@ -41,6 +41,8 @@
     "float.h": "c",
     "stdlib.h": "c",
     "stdio.h": "c",
-    "gpio.h": "c"
+    "gpio.h": "c",
+    "timer.h": "c",
+    "clocks.h": "c"
   }
 }

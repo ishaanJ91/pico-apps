@@ -1,4 +1,6 @@
 # Hashes of file build rules.
+79d28c35a1f489bcf0026e5e154183b7 assignments/assign02/CMakeFiles/assign02_ws2812_pio_h
+15ace9f00a26354fd3da02ac7a885d94 assignments/assign02/ws2812.pio.h
 8b65546dd6b2436e492ca47196da67bf examples/ws2812_rgb/CMakeFiles/ws2812_rgb_ws2812_pio_h
 8f7b59e99d24abb13b8e4233c7b6563a examples/ws2812_rgb/ws2812.pio.h
 d594570e4fdcadaadf3e01b481114e7d pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin

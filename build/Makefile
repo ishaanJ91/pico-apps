@@ -195,6 +195,19 @@ assign02/fast:
 .PHONY : assign02/fast
 
 #=============================================================================
+# Target rules for targets named assign02_ws2812_pio_h
+
+# Build rule for target.
+assign02_ws2812_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assign02_ws2812_pio_h
+.PHONY : assign02_ws2812_pio_h
+
+# fast build rule for target.
+assign02_ws2812_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f assignments/assign02/CMakeFiles/assign02_ws2812_pio_h.dir/build.make assignments/assign02/CMakeFiles/assign02_ws2812_pio_h.dir/build
+.PHONY : assign02_ws2812_pio_h/fast
+
+#=============================================================================
 # Target rules for targets named blink_c
 
 # Build rule for target.
@@ -449,6 +462,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... assign02_ws2812_pio_h"
 	@echo "... bs2_default_bin"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... debugprobe_probe_oen_pio_h"

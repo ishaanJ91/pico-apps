@@ -3983,45 +3983,45 @@ LOAD linker stubs
  .debug_rnglists
                 0x00000fe3       0xfe CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_multicore/multicore.c.o
 
-.debug_line     0x00000000    0x11906
- .debug_line    0x00000000      0x6fd CMakeFiles/lab07.dir/lab07.c.o
- .debug_line    0x000006fd      0xe42 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x0000153f      0x23e CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x0000177d      0x67f CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/hardware_claim/claim.c.o
- .debug_line    0x00001dfc      0x45c CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x00002258      0x413 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x0000266b     0x12ac CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x00003917      0x2ec CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_sync/lock_core.c.o
- .debug_line    0x00003c03     0x12cf CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_sync/mutex.c.o
- .debug_line    0x00004ed2     0x1e26 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_time/time.c.o
- .debug_line    0x00006cf8      0xee7 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x00007bdf      0x9eb CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_uart/uart.c.o
- .debug_line    0x000085ca      0xc46 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x00009210      0x563 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x00009773      0x330 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x00009aa3      0x303 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x00009da6      0x368 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x0000a10e      0x294 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x0000a3a2      0x533 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x0000a8d5      0x581 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x0000ae56      0x107 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_line    0x0000af5d      0x2a9 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_line    0x0000b206      0x452 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_line    0x0000b658      0x40e CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_line    0x0000ba66      0x670 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_line    0x0000c0d6       0x61 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_line    0x0000c137      0x3d2 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_line    0x0000c509      0x3f7 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_line    0x0000c900      0x198 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_line    0x0000ca98      0x4d7 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_malloc/malloc.c.o
- .debug_line    0x0000cf6f       0x94 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_line    0x0000d003      0x210 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x0000d213     0x1386 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x0000e599       0xa5 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x0000e63e      0x82c CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x0000ee6a      0xdbf CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_stdio/stdio.c.o
- .debug_line    0x0000fc29      0xbc9 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
- .debug_line    0x000107f2     0x1114 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_multicore/multicore.c.o
+.debug_line     0x00000000    0x11905
+ .debug_line    0x00000000      0x6fc CMakeFiles/lab07.dir/lab07.c.o
+ .debug_line    0x000006fc      0xe42 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x0000153e      0x23e CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x0000177c      0x67f CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/hardware_claim/claim.c.o
+ .debug_line    0x00001dfb      0x45c CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x00002257      0x413 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x0000266a     0x12ac CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x00003916      0x2ec CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x00003c02     0x12cf CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_sync/mutex.c.o
+ .debug_line    0x00004ed1     0x1e26 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/common/pico_time/time.c.o
+ .debug_line    0x00006cf7      0xee7 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x00007bde      0x9eb CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_uart/uart.c.o
+ .debug_line    0x000085c9      0xc46 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x0000920f      0x563 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x00009772      0x330 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x00009aa2      0x303 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x00009da5      0x368 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x0000a10d      0x294 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x0000a3a1      0x533 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x0000a8d4      0x581 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x0000ae55      0x107 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_line    0x0000af5c      0x2a9 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_line    0x0000b205      0x452 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_line    0x0000b657      0x40e CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_line    0x0000ba65      0x670 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_line    0x0000c0d5       0x61 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_line    0x0000c136      0x3d2 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_line    0x0000c508      0x3f7 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_line    0x0000c8ff      0x198 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_line    0x0000ca97      0x4d7 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_line    0x0000cf6e       0x94 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_line    0x0000d002      0x210 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x0000d212     0x1386 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x0000e598       0xa5 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x0000e63d      0x82c CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x0000ee69      0xdbf CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_line    0x0000fc28      0xbc9 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+ .debug_line    0x000107f1     0x1114 CMakeFiles/lab07.dir/Users/macncheese/.pico-sdk/sdk/2.1.1/src/rp2_common/pico_multicore/multicore.c.o
 
 .debug_str      0x00000000     0x508f
  .debug_str     0x00000000     0x508f CMakeFiles/lab07.dir/lab07.c.o
